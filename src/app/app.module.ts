@@ -7,20 +7,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { TopStoriesComponent } from './components/top-stories/top-stories.component';
 import { SharedModule } from './shared/shared.module';
 import { ItemComponent } from './components/item/item.component';
-
+import { DomainPipe } from './shared/domain.pipe';
+import { MomentModule } from 'ngx-moment';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     TopStoriesComponent,
-    ItemComponent
+    ItemComponent,
+    DomainPipe
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    MomentModule
     
     
   ],

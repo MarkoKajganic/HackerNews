@@ -11,8 +11,12 @@ export class StoriesService {
 
   getTopStories(): Observable<any> {
     return this.http.get('https://hacker-news.firebaseio.com/v0/topstories.json')
-                    .map(response => response);
-                
+                    .map(response => response);              
   }
+
+  getItem(id): Observable<any> {
+    return this.http.get('https://hacker-news.firebaseio.com/v0/item/' + id + '.json')
+                    .map(response => response); 
+  } 
 
 }
