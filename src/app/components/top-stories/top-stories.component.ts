@@ -8,19 +8,13 @@ import { StoriesService } from '../../shared/services/stories.service';
 })
 export class TopStoriesComponent implements OnInit {
   
-  items: number[];
-  stories;
+  private items: any;
   
-  
-
-  constructor(private storiesService: StoriesService) {
-    this.items = Array(50);
-  }
+  constructor(private storiesService: StoriesService) { }
 
   ngOnInit() {
-    this.storiesService.getTopStories().subscribe(
-        stories => this.stories = stories);
-        
+    this.storiesService.getTopStories().subscribe
+        (data => {this.items = data});
   }
 
   
