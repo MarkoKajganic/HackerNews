@@ -1,4 +1,4 @@
-     
+<!-- STORY INFO -->
 <div>
     <p>
         <a class="title" href="{{item.url}}"> {{item.title}} </a>
@@ -8,6 +8,7 @@
     <div class="subtext">
         {{item.score}} points by <a href="">{{item.by}}</a>
         {{ item.time | amFromUnix | amTimeAgo }}
+        | hide | past | web | favorite |
         <a routerLink="/item/{{item.id}}">
             <span *ngIf="item.descendants !== 0"> {{item.descendants}}
                 <span *ngIf="item.descendants === 1">comment</span>
@@ -18,5 +19,16 @@
     </div>
 </div>
 
-<hr>
-        
+<br>
+
+<!--NEW COMMENT TEXT AREA -->
+<div>
+  <textarea name="text" rows="6" cols="60"></textarea>
+  <br>
+  <input value="add Comment" type="submit">
+</div>
+
+<!-- COMMENTS -->
+<div>   
+   <app-comments-all [commentIds]="item.kids"></app-comments-all>
+</div>

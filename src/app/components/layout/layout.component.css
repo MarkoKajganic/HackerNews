@@ -1,0 +1,33 @@
+.navbar {
+    background-color:#ff6600;
+    color: #000000;
+    line-height: 30px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    padding: 10px 10px;
+}
+
+a:link{
+    color: #ffffff;
+}
+
+a:visited{
+    color: #ffffff;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}

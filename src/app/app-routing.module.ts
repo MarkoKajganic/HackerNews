@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TopStoriesComponent } from './components/top-stories/top-stories.component';
+import { CommentPageComponent } from './components/comments/comment-page/comment-page.component';
 
 const appRoutes: Routes = [
    {
@@ -12,6 +13,11 @@ const appRoutes: Routes = [
       path: 'topStories',
       component: TopStoriesComponent,
    },
+   {
+      path: 'item/:id',
+      component: CommentPageComponent,
+   },
+
 
     
 ];

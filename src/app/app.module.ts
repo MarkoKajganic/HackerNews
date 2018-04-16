@@ -9,6 +9,9 @@ import { SharedModule } from './shared/shared.module';
 import { ItemComponent } from './components/item/item.component';
 import { DomainPipe } from './shared/domain.pipe';
 import { MomentModule } from 'ngx-moment';
+import { CommentPageComponent } from './components/comments/comment-page/comment-page.component';
+import { CommentsAllComponent } from './components/comments/comments-all/comments-all.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { MomentModule } from 'ngx-moment';
     LayoutComponent,
     TopStoriesComponent,
     ItemComponent,
-    DomainPipe
+    DomainPipe,
+    CommentPageComponent,
+    CommentsAllComponent,
     
   ],
   imports: [
