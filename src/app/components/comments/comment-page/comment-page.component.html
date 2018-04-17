@@ -2,22 +2,20 @@
 
 <!-- STORY INFO -->
     <div>
-        <p>
-            <a class="title" href="{{item.url}}"> {{item.title}} </a>
-            <span class="url">{{item.url | domain}}</span>
-        </p>
+        <a class="title" href="{{item.url}}"> {{item.title}} </a>
+        <span class="url">{{item.url | domain}}</span>
 
-            <div class="subtext">
-                {{item.score}} points by <a href="">{{item.by}}</a>
-                {{ item.time | amFromUnix | amTimeAgo }}
-                | hide | past | web | favorite |
-                
-                <span *ngIf="item.descendants !== 0"> {{item.descendants}}
-                    <span *ngIf="item.descendants === 1">comment</span>
-                    <span *ngIf="item.descendants > 1">comments</span>
-                    <span *ngIf="item.descendants === 0">discuss</span>
-                </span>
-            </div>
+        <div class="subtext">
+            {{item.score}} points by <a href="">{{item.by}}</a>
+            {{ item.time | amFromUnix | amTimeAgo }}
+            | hide | past | web | favorite |
+            
+            <span *ngIf="item.descendants !== 0"> {{item.descendants}}
+                <span *ngIf="item.descendants === 1">comment</span>
+                <span *ngIf="item.descendants > 1">comments</span>
+                <span *ngIf="item.descendants === 0">discuss</span>
+            </span>
+        </div>
     </div>
 
     <br>
