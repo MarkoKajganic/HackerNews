@@ -14,7 +14,8 @@ export class TopStoriesComponent implements OnInit {
 
   ngOnInit() {
     this.storiesService.getTopStories().subscribe
-        (data => {this.items = data});
+        (data => {this.items = data},
+         error => console.log('there was an error while getting stories'));
   }
 
   

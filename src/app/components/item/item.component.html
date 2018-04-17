@@ -1,21 +1,24 @@
-     
 <div>
 
-    <div class="loader" *ngIf="!item"> </div>
+    <!-- <div class="loader" *ngIf="!item"> </div> -->
 
-    <a class="title" href="{{item.url}}"> {{item.title}} </a>
-    <span class="url">{{item.url | domain}}</span>
+    <div *ngIf="item">
 
-    <div class="subtext">
-        {{item.score}} points by <a href="">{{item.by}}</a>
-        {{ item.time | amFromUnix | amTimeAgo }}
-        <a routerLink="/item/{{item.id}}">
-            <span *ngIf="item.descendants !== 0"> {{item.descendants}}
-                <span *ngIf="item.descendants === 1">comment</span>
-                <span *ngIf="item.descendants > 1">comments</span>
-                <span *ngIf="item.descendants === 0">discuss</span>
+        <a class="title" href="{{item.url}}"> {{item.title}} </a>
+            <span class="url">{{item.url | domain}}
             </span>
-        </a>
+
+            <div class="subtext">
+                {{item.score}} points by <a href="">{{item.by}}</a> {{ item.time | amFromUnix | amTimeAgo }}
+
+                <a routerLink="/item/{{item.id}}">
+                    <span *ngIf="item.descendants !== 0"> {{item.descendants}}
+                        <span *ngIf="item.descendants === 1">comment</span>
+                        <span *ngIf="item.descendants > 1">comments</span>
+                        <span *ngIf="item.descendants === 0">discuss</span>
+                    </span>
+                </a>
+            </div>
     </div>
 </div>
 
