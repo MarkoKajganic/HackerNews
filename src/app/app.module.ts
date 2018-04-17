@@ -11,6 +11,7 @@ import { DomainPipe } from './shared/domain.pipe';
 import { MomentModule } from 'ngx-moment';
 import { CommentPageComponent } from './components/comments/comment-page/comment-page.component';
 import { CommentsAllComponent } from './components/comments/comments-all/comments-all.component';
+import { CommentsItemComponent } from './components/comments/comments-item/comments-item.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { CommentsAllComponent } from './components/comments/comments-all/comment
     DomainPipe,
     CommentPageComponent,
     CommentsAllComponent,
+    CommentsItemComponent,
     
   ],
   imports: [

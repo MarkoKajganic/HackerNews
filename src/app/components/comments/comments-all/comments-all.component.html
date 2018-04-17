@@ -1,8 +1,10 @@
 
 <div>
     <ul>
-      <li *ngFor="let comment of commentIds">
-        <p>{{comment}}</p> 
+      <li *ngFor="let commentId of commentIds">
+        <app-comments-item commentId="{{commentId}}"> </app-comments-item>
+      </li>
+     
     </ul>
     
   </div>

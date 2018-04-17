@@ -9,8 +9,8 @@ import { StoriesService } from '../../../shared/services/stories.service';
 })
 export class CommentPageComponent implements OnInit {
 
-  id;
-  item;
+  id;   //to get story ID from route
+  private item: any;
 
   constructor(private route: ActivatedRoute,
               private service: StoriesService) { }
@@ -23,6 +23,7 @@ export class CommentPageComponent implements OnInit {
       }, error => console.log('Could not load item' + itemId));
     });
 
+    
 
   }
 

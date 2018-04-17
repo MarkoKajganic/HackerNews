@@ -9,13 +9,13 @@
         {{item.score}} points by <a href="">{{item.by}}</a>
         {{ item.time | amFromUnix | amTimeAgo }}
         | hide | past | web | favorite |
-        <a routerLink="/item/{{item.id}}">
+        
             <span *ngIf="item.descendants !== 0"> {{item.descendants}}
                 <span *ngIf="item.descendants === 1">comment</span>
                 <span *ngIf="item.descendants > 1">comments</span>
                 <span *ngIf="item.descendants === 0">discuss</span>
             </span>
-        </a>
+        
     </div>
 </div>
 
@@ -28,7 +28,9 @@
   <input value="add Comment" type="submit">
 </div>
 
+<hr>
+
 <!-- COMMENTS -->
 <div>   
-   <app-comments-all [commentIds]="item.kids"></app-comments-all>
+   <app-comments-all commentIds="{{item.kids}}"></app-comments-all>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { StoriesService } from '../../../shared/services/stories.service';
 
 @Component({
   selector: 'app-comments-all',
@@ -7,10 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CommentsAllComponent implements OnInit {
   @Input() commentIds;
-
-  constructor() { }
+  
+  
+  constructor(private service: StoriesService) { }
 
   ngOnInit() {
+    this.commentIds = JSON.parse("[" + this.commentIds + "]");
     
   }
 

@@ -1,0 +1,11 @@
+<div>
+  <span class="by">{{comment.by}}</span>
+  <span class="time">{{comment.time | amFromUnix | amTimeAgo}}</span>
+
+  <p>
+     {{comment.text}}
+  </p>
+</div>
+
+<app-comments-all  commentIds="{{comment.kids}}"> </app-comments-all>
+      
