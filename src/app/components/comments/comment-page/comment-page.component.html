@@ -1,36 +1,41 @@
-<!-- STORY INFO -->
-<div>
-    <p>
-        <a class="title" href="{{item.url}}"> {{item.title}} </a>
-        <span class="url">{{item.url | domain}}</span>
-    </p>
+<div class="comment-page">
 
-    <div class="subtext">
-        {{item.score}} points by <a href="">{{item.by}}</a>
-        {{ item.time | amFromUnix | amTimeAgo }}
-        | hide | past | web | favorite |
-        
-            <span *ngIf="item.descendants !== 0"> {{item.descendants}}
-                <span *ngIf="item.descendants === 1">comment</span>
-                <span *ngIf="item.descendants > 1">comments</span>
-                <span *ngIf="item.descendants === 0">discuss</span>
-            </span>
-        
+<!-- STORY INFO -->
+    <div>
+        <p>
+            <a class="title" href="{{item.url}}"> {{item.title}} </a>
+            <span class="url">{{item.url | domain}}</span>
+        </p>
+
+            <div class="subtext">
+                {{item.score}} points by <a href="">{{item.by}}</a>
+                {{ item.time | amFromUnix | amTimeAgo }}
+                | hide | past | web | favorite |
+                
+                <span *ngIf="item.descendants !== 0"> {{item.descendants}}
+                    <span *ngIf="item.descendants === 1">comment</span>
+                    <span *ngIf="item.descendants > 1">comments</span>
+                    <span *ngIf="item.descendants === 0">discuss</span>
+                </span>
+            </div>
     </div>
-</div>
 
 <br>
 
 <!--NEW COMMENT TEXT AREA -->
-<div>
-  <textarea name="text" rows="6" cols="60"></textarea>
-  <br>
-  <input value="add Comment" type="submit">
-</div>
+    <div>
+        <textarea name="text" rows="6" cols="60"></textarea>
+            <br>
+        <input value="add Comment" type="submit">
+    </div>
 
-<hr>
+    <hr>
+
+</div>
 
 <!-- COMMENTS -->
 <div>   
    <app-comments-all commentIds="{{item.kids}}"></app-comments-all>
 </div>
+
+

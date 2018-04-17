@@ -12,6 +12,7 @@ import { MomentModule } from 'ngx-moment';
 import { CommentPageComponent } from './components/comments/comment-page/comment-page.component';
 import { CommentsAllComponent } from './components/comments/comments-all/comments-all.component';
 import { CommentsItemComponent } from './components/comments/comments-item/comments-item.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { CommentsItemComponent } from './components/comments/comments-item/comme
     CommentPageComponent,
     CommentsAllComponent,
     CommentsItemComponent,
+    FooterComponent,
     
   ],
   imports: [

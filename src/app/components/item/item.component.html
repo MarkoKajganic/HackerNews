@@ -1,9 +1,10 @@
      
 <div>
-    <p>
-        <a class="title" href="{{item.url}}"> {{item.title}} </a>
-        <span class="url">{{item.url | domain}}</span>
-    </p>
+
+    <div class="loader" *ngIf="!item"> </div>
+
+    <a class="title" href="{{item.url}}"> {{item.title}} </a>
+    <span class="url">{{item.url | domain}}</span>
 
     <div class="subtext">
         {{item.score}} points by <a href="">{{item.by}}</a>
@@ -18,5 +19,4 @@
     </div>
 </div>
 
-<hr>
         
