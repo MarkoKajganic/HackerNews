@@ -9,6 +9,7 @@ import { StoriesService } from '../../shared/services/stories.service';
 export class TopStoriesComponent implements OnInit {
   
   private items: any;
+  private sliceStories = 30;
   
   constructor(private storiesService: StoriesService) { }
 
@@ -18,6 +19,9 @@ export class TopStoriesComponent implements OnInit {
          error => console.log('there was an error while getting stories'));
   }
 
+  loadMore() {
+    this.sliceStories += 30;
+  }
   
 }
 
