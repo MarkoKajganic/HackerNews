@@ -1,39 +1,36 @@
-<div class="comment-page">
+<div *ngIf="item">
+    <div class="comment-page">
 
-<!-- STORY INFO -->
-    <div>
-        <a class="title" href="{{item.url}}"> {{item.title}} </a>
-        <span class="url">{{item.url | domain}}</span>
+    <!-- STORY INFO -->
+        <div>
+            <a class="title" href="{{item.url}}"> {{item.title}} </a>
+            <span class="url">{{item.url | domain}}</span>
 
-        <div class="subtext">
-            {{item.score}} points by <a href="">{{item.by}}</a>
-            {{ item.time | amFromUnix | amTimeAgo }}
-            | hide | past | web | favorite |
-            
-            <span *ngIf="item.descendants !== 0"> {{item.descendants}}
-                <span *ngIf="item.descendants === 1">comment</span>
-                <span *ngIf="item.descendants > 1">comments</span>
-                <span *ngIf="item.descendants === 0">discuss</span>
-            </span>
+            <div class="subtext">
+                {{item.score}} points by <a href="">{{item.by}}</a>
+                {{ item.time | amFromUnix | amTimeAgo }}
+                | hide | past | web | favorite |
+                
+                <span *ngIf="item.descendants !== 0"> {{item.descendants}}
+                    <span *ngIf="item.descendants === 1">comment</span>
+                    <span *ngIf="item.descendants > 1">comments</span>
+                    <span *ngIf="item.descendants === 0">discuss</span>
+                </span>
+            </div>
         </div>
+        <br>
+
+    <!--NEW COMMENT TEXT AREA -->
+        <div>
+            <textarea name="text" rows="6" cols="60"></textarea>
+                <br>
+            <input value="add Comment" type="submit">
+        </div>
+        <hr>
     </div>
 
-    <br>
-
-<!--NEW COMMENT TEXT AREA -->
-    <div>
-        <textarea name="text" rows="6" cols="60"></textarea>
-            <br>
-        <input value="add Comment" type="submit">
+    <!-- COMMENTS -->
+    <div>   
+    <app-comments-all commentIds="{{item.kids}}"></app-comments-all>
     </div>
-
-    <hr>
-
 </div>
-
-<!-- COMMENTS -->
-<div>   
-   <app-comments-all commentIds="{{item.kids}}"></app-comments-all>
-</div>
-
-

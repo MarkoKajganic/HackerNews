@@ -10,6 +10,7 @@ export class CommentsItemComponent implements OnInit {
   @Input() commentId;
 
   public comment;
+  public show = true;
  
   constructor(private service: StoriesService) { }
 
@@ -17,5 +18,6 @@ export class CommentsItemComponent implements OnInit {
     this.service.getItem(this.commentId).subscribe
     (data => {this.comment = data});
   }
+
 
 }

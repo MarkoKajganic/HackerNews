@@ -1,15 +1,19 @@
 <div *ngIf="comment">
-  <div>
-    <span class="by">{{comment.by}}</span>
-    <span class="time">{{comment.time | amFromUnix | amTimeAgo}}</span>
+  <span class="by">{{comment.by}}</span>
+  <span class="time">{{comment.time | amFromUnix | amTimeAgo}}</span>
 
-    <p>
-      {{comment.text}}
-    </p>
+  <span *ngIf="show"> <a (click)="show = !show"> [-] </a> </span>
+  <span *ngIf="!show"> <a (click)="show = !show"> [+] </a> </span>
+
+  <div *ngIf="show">
+
+    <div >
+      <p> {{comment.text}} </p>
+    </div>
+
+    <div *ngIf="comment.kids">
+      <app-comments-all  commentIds="{{comment.kids}}"> </app-comments-all>
+    </div>
+
   </div>
-
-  <div *ngIf="comment.kids">
-    <app-comments-all  commentIds="{{comment.kids}}"> </app-comments-all>
-  </div>
-
 </div>
