@@ -6,16 +6,17 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class StoriesService {
+  baseUrl = 'https://hacker-news.firebaseio.com/v0';
 
   constructor(private http: HttpClient) { }
 
   getTopStories(): Observable<any> {
-    return this.http.get('https://hacker-news.firebaseio.com/v0/topstories.json')
+    return this.http.get(this.baseUrl + '/topstories.json')
                     .map(response => response);              
   }
 
   getItem(id): Observable<any> {
-    return this.http.get('https://hacker-news.firebaseio.com/v0/item/' + id + '.json')
+    return this.http.get(this.baseUrl + '/item/' + id + '.json')
                     .map(response => response); 
   } 
 

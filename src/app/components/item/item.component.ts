@@ -14,7 +14,8 @@ export class ItemComponent implements OnInit {
 
   ngOnInit() {
     this.storiesService.getItem(this.itemId).subscribe
-        (data => {this.item = data});
+        (data => {this.item = data},
+          error => console.log('there was an error while getting item'));
   }
 
 }

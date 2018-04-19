@@ -18,8 +18,6 @@ const appRoutes: Routes = [
       component: CommentPageComponent,
    },
 
-
-    
 ];
 
 @NgModule({

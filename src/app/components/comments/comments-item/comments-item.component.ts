@@ -16,7 +16,8 @@ export class CommentsItemComponent implements OnInit {
 
   ngOnInit() {
     this.service.getItem(this.commentId).subscribe
-    (data => {this.comment = data});
+    (data => {this.comment = data},
+      error => console.log('there was an error while getting item'));
   }
 
 

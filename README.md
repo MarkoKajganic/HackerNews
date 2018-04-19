@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
+## App information
+
+-HackerNews app displays top stories with comments using offical API (https://github.com/HackerNews/API)
+-Click on a story title opens story in a new tab. Click on comments link on a story opens comments for that story in the same tab. Comments can be collapsed by clicking on [-] and expanded by clicking on [+].
+-Clicking on HackerNews title links back to top stories page.
+-Comments, New, Show, Ask, and jobs links are not implemented.
+
+-To clone this project run 'git clone https://github.com/MarkoKajganic/HackerNews.git'.
+- Run 'npm install' to install dependencies.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

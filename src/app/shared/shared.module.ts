@@ -17,10 +17,10 @@ import { ItemComponent } from '../components/item/item.component';
     StoriesService
 ],
   declarations: [
-    //ItemComponent
+   
   ],
   exports: [
-    //ItemComponent
+    
 ]
 
 })

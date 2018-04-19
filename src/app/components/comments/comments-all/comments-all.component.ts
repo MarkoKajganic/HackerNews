@@ -9,12 +9,10 @@ import { StoriesService } from '../../../shared/services/stories.service';
 export class CommentsAllComponent implements OnInit {
   @Input() commentIds;
   
-  
   constructor(private service: StoriesService) { }
 
   ngOnInit() {
     this.commentIds = JSON.parse("[" + this.commentIds + "]");
-    
   }
 
 }

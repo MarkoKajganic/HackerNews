@@ -22,11 +22,6 @@ export class CommentPageComponent implements OnInit {
         this.item = data;
       }, error => console.log('Could not load item' + itemId));
     });
-
-    
-
   }
-
-
 
 }
