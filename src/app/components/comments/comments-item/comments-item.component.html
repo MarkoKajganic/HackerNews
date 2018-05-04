@@ -8,7 +8,7 @@
   <div *ngIf="show">
 
     <div>
-      <p> {{comment.text}} </p>
+      <p [innerHTML]="comment?.text"> </p>
     </div>
 
     <div *ngIf="comment.kids">
