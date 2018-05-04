@@ -9,7 +9,7 @@ import { StoriesService } from '../../../shared/services/stories.service';
 export class CommentsItemComponent implements OnInit {
   @Input() commentId;
 
-  public comment;
+  public comment: object;
   public show = true;
  
   constructor(private service: StoriesService) { }

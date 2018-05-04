@@ -8,8 +8,8 @@ import { StoriesService } from '../../shared/services/stories.service';
 })
 export class TopStoriesComponent implements OnInit {
   
-  private items: any;
-  private sliceStories = 30;
+  private items: number;
+  private numberOfStories = 30;
   
   constructor(private storiesService: StoriesService) { }
 
@@ -20,7 +20,7 @@ export class TopStoriesComponent implements OnInit {
   }
 
   loadMore() {
-    this.sliceStories += 30;
+    this.numberOfStories += 30;
   }
   
 }

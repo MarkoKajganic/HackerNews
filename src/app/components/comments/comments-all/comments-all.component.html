@@ -1,7 +1,7 @@
 <div class="comments-all">
   <ul>
     <li *ngFor="let commentId of commentIds">
-      <app-comments-item commentId="{{commentId}}"> </app-comments-item>
+      <app-comments-item [commentId]="commentId"> </app-comments-item>
     </li>
   </ul>
 </div>

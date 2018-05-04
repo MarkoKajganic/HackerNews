@@ -10,7 +10,7 @@ import { StoriesService } from '../../../shared/services/stories.service';
 export class CommentPageComponent implements OnInit {
 
   id;   //to get story ID from route
-  private item: any;
+  private item: object;
 
   constructor(private route: ActivatedRoute,
               private service: StoriesService) { }

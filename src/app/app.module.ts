@@ -26,16 +26,15 @@ import { FooterComponent } from './components/footer/footer.component';
     CommentsAllComponent,
     CommentsItemComponent,
     FooterComponent,
-    
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     MomentModule
-    
-    
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -6,13 +6,9 @@ import { StoriesService } from '../../../shared/services/stories.service';
   templateUrl: './comments-all.component.html',
   styleUrls: ['./comments-all.component.css']
 })
-export class CommentsAllComponent implements OnInit {
+export class CommentsAllComponent {
   @Input() commentIds;
   
   constructor(private service: StoriesService) { }
-
-  ngOnInit() {
-    this.commentIds = JSON.parse("[" + this.commentIds + "]");
-  }
 
 }

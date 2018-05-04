@@ -8,7 +8,7 @@ import { StoriesService } from '../../shared/services/stories.service';
 })
 export class ItemComponent implements OnInit {
   @Input() itemId: number;
-  public item;
+  public item: object;
 
   constructor(private storiesService: StoriesService) { }
 

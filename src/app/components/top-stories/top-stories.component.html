@@ -1,6 +1,6 @@
 <div class="topStories">
   <ol>
-    <li *ngFor="let item of items | slice:0: sliceStories ">
+    <li *ngFor="let item of items | slice: 0 : numberOfStories ">
       <app-item itemId="{{ item }}"></app-item>
     </li>
   </ol>
@@ -14,4 +14,3 @@
 </div>
 
 
-<app-footer></app-footer>
